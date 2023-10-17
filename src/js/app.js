@@ -1,11 +1,8 @@
-export function character(character) {
-  for (let i = 0; i < character.length; i++) {
-    if (character[i].health > 50) {
-      return 'healthy'
-    } else if (character[i].health > 15 && character[i].health <= 50) {
-      return 'wounded'
-    } else {
-      return 'critical'
-    }
+export default function healthCheck(character) {
+  if (character.health > 50) {
+    return 'healthy';
+  } if (character.health > 15 && character.health <= 50) {
+    return 'wounded';
   }
+  return 'critical';
 }
